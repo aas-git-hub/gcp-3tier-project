@@ -1,7 +1,7 @@
 variable "project_id" {
   description = "GCP Project ID"
   type        = string
-  default     = "aas-metroc-project"
+  default     = "aas-metroc-project"    # Project ID is not Project Name
 }
 
 variable "region" {
@@ -13,7 +13,7 @@ variable "region" {
 variable "zones" {
   description = "GCP Zones for high availability"
   type        = list(string)
-  default     = ["us-central1-a", "us-central1-b", "us-central1-c"]
+  default     = ["us-central1-a", "us-central1-b"]
 }
 
 variable "environment" {
@@ -39,13 +39,13 @@ variable "vpc_cidr" {
 variable "web_subnet_cidrs" {
   description = "Web Tier Subnet CIDRs"
   type        = list(string)
-  default     = ["10.100.1.0/24", "10.100.2.0/24", "10.100.3.0/24"]
+  default     = ["10.100.1.0/24", "10.100.2.0/24"]
 }
 
 variable "app_subnet_cidrs" {
   description = "App Tier Subnet CIDRs"
   type        = list(string)
-  default     = ["10.100.11.0/24", "10.100.12.0/24", "10.100.13.0/24"]
+  default     = ["10.100.11.0/24", "10.100.12.0/24"]
 }
 
 variable "db_subnet_cidr" {
